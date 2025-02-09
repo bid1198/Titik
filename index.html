@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titik</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-image: url('https://media.giphy.com/media/D35fOVm9gSQ91icJeR/giphy.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 800px; 
+        }
+
+        .titik {
+            width: 5px;
+            height: 5px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            transition: all 0.8s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .titik:hover, .titik:active {
+            width: 90vw;
+            height: 90vw;
+            max-width: 640px;
+            max-height: 640px;
+            border-radius: 50%;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Black_hole_representation.gif/640px-Black_hole_representation.gif') center/cover;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        .puisi-container {
+            width: 90%;
+            height: 90%;
+            overflow-y: auto;
+            scrollbar-width: none; 
+            -ms-overflow-style: none; 
+            position: relative;
+        }
+
+        .puisi-container::-webkit-scrollbar {
+            display: none; 
+        }
+
+        .puisi {
+            opacity: 0;
+            font-size: 0;
+            transition: opacity 0.8s, font-size 0.8s;
+            padding: 20px;
+            line-height: 1.8;
+            text-align: center;
+            user-select: none; 
+            pointer-events: none; 
+        }
+
+        .titik:hover .puisi-container, .titik:active .puisi-container {
+            opacity: 1;
+        }
+
+        .titik:hover .puisi, .titik:active .puisi {
+            opacity: 1;
+            font-size: 13.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="titik">
+        <div class="puisi-container">
+            <div class="puisi">
+                <p>jikalah puisi hanya kata<br>
+                permainan majas mululu<br>
+                sekalipun tak sudi aku<br>
+                menoleh kepadanya</p>
+
+                <p>tetapi apabila satu titik saja<br>
+                menyingkap semesta tak berhingga<br>
+                sejuta debu partikel, meson, quark<br>
+                dan suatu singgasana mulai nampak</p>
+
+                <p>barulah keras kepalaku mulai retak</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
